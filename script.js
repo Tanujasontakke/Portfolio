@@ -19,7 +19,9 @@ const projects = [
         description: "Miss Sontakke has engineered a comprehensive University Administrative Portal utilizing the most advanced React machinery and Flask engineering principles. This remarkable system facilitates faculty onboarding, academic scheduling, and administrative workflows with unprecedented security through JWT authentication and Role-Based Access Control mechanisms. The system has revolutionized university operations by implementing modular microservice architecture.",
         techStack: ["React.js Apparatus", "Flask Engine", "MySQL Archive", "Azure DevOps Telegraph", "Docker Steamworks", "Terraform Infrastructure"],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center",
-        alt: "University Portal System"
+        alt: "University Portal System",
+        githubRepo: "https://github.com/tanujasontakke/university-admin-portal",
+        liveDemo: "https://university-portal-demo.herokuapp.com"
     },
     {
         id: 2,
@@ -31,7 +33,9 @@ const projects = [
         description: "In a groundbreaking achievement, Miss Sontakke has developed a lightweight intelligent agent utilizing Llama2 mechanical learning engines and Hugging Face Transformers. This remarkable chatbot assists students with academic queries and personalized study planning, achieving a 20% increase in user engagement through sophisticated prompt engineering and natural language processing capabilities.",
         techStack: ["Llama2 Engine", "Hugging Face Transformers", "Gradio Interface", "Flask API", "Docker Containers", "Azure Monitor Telegraph"],
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop&crop=center",
-        alt: "AI Academic Assistant"
+        alt: "AI Academic Assistant",
+        githubRepo: "https://github.com/tanujasontakke/ai-academic-assistant",
+        liveDemo: "https://ai-assistant-demo.herokuapp.com"
     },
     {
         id: 3,
@@ -43,7 +47,9 @@ const projects = [
         description: "Miss Sontakke has architected and deployed extraordinary Azure Virtual Machine infrastructure using advanced CLI operations, ARM Templates, and Ansible automation. This industrial-grade system has accelerated enterprise releases by an astounding 80% while reducing operational overhead by 15%. The system implements sophisticated CI/CD automation with Azure DevOps and Jenkins for high-stakes enterprise deployments.",
         techStack: ["Azure Virtual Machines", "Terraform Infrastructure", "Jenkins Automation", "PowerShell Scripts", "Azure DevOps Pipeline", "Log Analytics Engine"],
         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop&crop=center",
-        alt: "Cloud Infrastructure"
+        alt: "Cloud Infrastructure",
+        githubRepo: "https://github.com/tanujasontakke/azure-infrastructure-automation",
+        liveDemo: null
     }
 ];
 
@@ -118,14 +124,16 @@ function renderProjects() {
                         </div>
                         
                         <div class="flex space-x-4">
-                            <a href="https://github.com/tanujasontakke" class="vintage-button" target="_blank">
+                            <a href="${project.githubRepo}" class="vintage-button" target="_blank">
                                 <i data-lucide="github" class="w-4 h-4 mr-2"></i>
                                 View Blueprints
                             </a>
-                            <a href="https://www.linkedin.com/in/tanuja-sontakke/" class="vintage-button-outline" target="_blank">
+                            ${project.liveDemo ? `
+                            <a href="${project.liveDemo}" class="vintage-button-outline" target="_blank">
                                 <i data-lucide="external-link" class="w-4 h-4 mr-2"></i>
-                                Professional Network
+                                Live Demonstration
                             </a>
+                            ` : ''}
                         </div>
                     </div>
                     
