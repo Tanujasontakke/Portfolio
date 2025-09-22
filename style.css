@@ -1,0 +1,129 @@
+/* Custom Fonts */
+body {
+    font-family: 'Crimson Text', serif;
+}
+
+.newspaper-title {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.newspaper-headline {
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+}
+
+.signature {
+    font-family: cursive;
+}
+
+/* Vintage Background */
+.vintage-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f7fafc' fill-opacity='0.1'%3E%3Cpath d='m0 40 0-2 20 0 20 0 0 2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Navigation */
+.nav-link {
+    @apply text-gray-900 hover:text-amber-800 transition-colors border-b-2 border-transparent hover:border-amber-800 pb-1;
+}
+
+/* Vintage Article Styling */
+.vintage-article {
+    @apply border-4 border-gray-800 bg-white p-8 shadow-lg;
+}
+
+.vintage-sidebar {
+    @apply border-4 border-gray-800 bg-amber-100 p-4 shadow-lg;
+}
+
+.vintage-quote {
+    @apply border-l-8 border-gray-800 pl-6 bg-amber-100 p-4 mb-6;
+}
+
+.vintage-classified {
+    @apply border-8 border-dashed border-amber-600 bg-amber-50 text-gray-900 p-8 shadow-2xl;
+}
+
+/* Drop Cap */
+.drop-cap {
+    float: left;
+    font-size: 4rem;
+    line-height: 1;
+    margin-right: 0.5rem;
+    margin-top: 0.25rem;
+    font-weight: bold;
+}
+
+/* Buttons */
+.vintage-button {
+    @apply px-6 py-3 bg-amber-600 text-gray-900 font-black uppercase tracking-wide hover:bg-amber-500 transition-colors flex items-center no-underline;
+}
+
+.vintage-button-outline {
+    @apply px-6 py-3 border-2 border-amber-600 text-amber-600 font-black uppercase tracking-wide hover:bg-amber-600 hover:text-gray-900 transition-colors no-underline;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.7s ease-in-out forwards;
+    opacity: 0;
+    transform: translateY(2rem);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(2rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .drop-cap {
+        font-size: 3rem;
+    }
+    
+    .newspaper-headline {
+        font-size: 2rem !important;
+    }
+}
+
+/* Skills styling */
+.skill-card {
+    @apply border-4 border-gray-800 bg-white shadow-lg;
+}
+
+.skill-header {
+    @apply bg-gray-800 text-white p-3 flex items-center;
+}
+
+.skill-icon {
+    @apply p-2 bg-amber-600 rounded mr-3;
+}
+
+.skill-title {
+    @apply text-lg font-bold uppercase tracking-wide;
+}
+
+.skill-list {
+    @apply p-4;
+}
+
+.skill-item {
+    @apply flex items-center text-gray-800 font-medium mb-2;
+}
+
+.skill-bullet {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid #d97706;
+    margin-right: 12px;
+}
